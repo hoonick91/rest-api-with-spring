@@ -1,6 +1,7 @@
 package me.hoonick.demoinflearnrestapi.events;
 
 import lombok.*;
+import me.hoonick.demoinflearnrestapi.accounts.Account;
 import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
@@ -33,6 +34,8 @@ public class Event {
     private boolean free;
     @Enumerated(EnumType.STRING)
     private EventStatus eventStatus = EventStatus.DRAFT;
+    @ManyToOne
+    private Account manager;
 
     public void update() {
         if (this.getBasePrice() != 0 || this.getMaxPrice() != 0) {

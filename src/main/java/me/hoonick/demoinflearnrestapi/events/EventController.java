@@ -2,7 +2,6 @@ package me.hoonick.demoinflearnrestapi.events;
 
 
 import me.hoonick.demoinflearnrestapi.common.ErrorsResource;
-import org.apache.coyote.Response;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,7 +11,6 @@ import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
